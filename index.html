@@ -1,83 +1,235 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>1A Haircut München – Friseur & Barber</title>
-<meta name="description" content="1A Haircut – moderner Friseursalon in München, Augustenstraße 64. Herrenhaarschnitte, Bart und Styling.">
-<style>
-*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0b0b0b;color:#fff}
-a{text-decoration:none;color:inherit}.wrap{max-width:1100px;margin:auto;padding:0 22px}
-header{position:sticky;top:0;background:rgba(11,11,11,.94);backdrop-filter:blur(10px);z-index:10;border-bottom:1px solid #292929}
-nav{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:24px;font-weight:900;letter-spacing:1px}.logo span{color:#d6b06a}
-nav .links{display:flex;gap:24px;font-size:14px;color:#ccc}
-.hero{min-height:650px;display:flex;align-items:center;background:radial-gradient(circle at 75% 40%,#303030 0,#151515 32%,#0b0b0b 68%)}
-.hero h1{font-size:clamp(48px,8vw,90px);line-height:.95;margin:0 0 22px;font-weight:900}.gold{color:#d6b06a}.hero p{font-size:20px;line-height:1.5;color:#cfcfcf;max-width:620px}
-.btn{display:inline-block;padding:15px 24px;border-radius:8px;background:#d6b06a;color:#111;font-weight:800;margin:10px 8px 0 0}.btn.dark{background:#222;color:#fff;border:1px solid #444}
-section{padding:80px 0}.title{font-size:38px;margin:0 0 12px}.sub{color:#aaa;margin:0 0 35px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#151515;border:1px solid #292929;border-radius:16px;padding:28px}.card h3{margin:0 0 10px;font-size:21px}.price{font-size:28px;font-weight:900;color:#d6b06a}.muted{color:#999}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:35px}.photo{min-height:360px;border-radius:18px;background:linear-gradient(135deg,#292929,#111);display:flex;align-items:center;justify-content:center;color:#777;border:1px solid #333}
-.hours{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:500px}.hours div{padding:12px 0;border-bottom:1px solid #292929}
-.contact{background:#151515;border-radius:20px;padding:35px}.footer{padding:30px 0;color:#777;border-top:1px solid #292929}
-@media(max-width:750px){nav .links{display:none}.grid,.about{grid-template-columns:1fr}.hero{min-height:570px}.hours{grid-template-columns:1fr}.title{font-size:32px}}
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.gallery img{width:100%;height:300px;object-fit:cover;border-radius:14px}@media(max-width:760px){.gallery{grid-template-columns:repeat(2,1fr)}.gallery img{height:240px}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1A Haircut München - Barber & Hair Salon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: #f7f7f8;
+            color: #121212;
+            padding-bottom: 90px;
+        }
+
+        .hero-banner {
+            width: 100%;
+            height: 280px;
+            position: relative;
+            background-color: #e5e5e5;
+            overflow: hidden;
+        }
+
+        .hero-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .main-card {
+            max-width: 600px;
+            margin: -20px auto 0;
+            background: #ffffff;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            padding: 24px 20px;
+            position: relative;
+            box-shadow: 0 -4px 12px rgba(0,0,0,0.05);
+        }
+
+        .salon-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .salon-subtitle {
+            font-size: 14px;
+            color: #6e6e73;
+            margin-bottom: 12px;
+        }
+
+        .rating-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .rating-badge span.star {
+            color: #f5a623;
+        }
+
+        .rating-badge span.status {
+            color: #d9534f;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+
+        .location-info {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 14px;
+            color: #3a3a3c;
+            padding: 12px 0;
+            border-top: 1px solid #f0f0f2;
+            border-bottom: 1px solid #f0f0f2;
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .about-text {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #48484a;
+            margin-bottom: 28px;
+        }
+
+        .services-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+
+        .service-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            background: #f9f9fa;
+            border-radius: 12px;
+            border: 1px solid #eef0f2;
+        }
+
+        .service-name {
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .service-desc {
+            font-size: 13px;
+            color: #6e6e73;
+            margin-top: 4px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .sticky-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            padding: 12px 20px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        .btn-book {
+            width: 100%;
+            max-width: 560px;
+            background: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 16px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            display: block;
+        }
+    </style>
 </head>
 <body>
-<header><div class="wrap"><nav>
-<div class="logo">1A <span>HAIRCUT</span></div>
-<div class="links"><a href="#services">Leistungen</a><a href="#about">Über uns</a><a href="#contact">Kontakt</a></div>
-</nav></div></header>
 
-<main>
-<section class="hero"><div class="wrap">
-<p class="gold"><b>FRISEUR • MÜNCHEN</b></p>
-<h1>DEIN STYLE.<br><span class="gold">DEIN LOOK.</span></h1>
-<p>1A Haircut in der Augustenstraße 64 – moderne Herrenhaarschnitte, Bart & Styling mitten in München.</p>
-<a class="btn" href="#contact">TERMIN ANFRAGEN</a>
-<a class="btn dark" href="tel:+498926025349">ANRUFEN</a>
-</div></section>
+    <div class="hero-banner">
+        <img src="IMG_0186.jpeg" alt="1A Haircut Salon">
+    </div>
 
-<section id="services"><div class="wrap">
-<h2 class="title">Unsere Leistungen</h2>
-<p class="sub">Schnell, sauber und genau nach deinem Wunsc class="grid">
-<div class="card"><h3>Haarschnitt</h3><p class="muted">Moderner Herrenhaarschnitt & Styling.</p><div class="price">18 €</div></div>
-<div class="card"><h3>Haare mit Seiten / Null</h3><p class="muted">Haarschnitt mit sauber ausgearbeiteten Seiten.</p><div class="price">21 €</div></div>
-<div class="card"><h3>Haare + Bart</h3><p class="muted">Kompletter Look inklusive Bart.</p><div class="price">35 €</div></div>
+    <div class="main-card">
+        <h1 class="salon-title">1A Haircut München</h1>
+        <div class="salon-subtitle">Barber & Friseur</div>
 
-<img src="IMG_6526.png" alt="Haircut 1">
-<img src="IMG_6527.png" alt="Haircut 2">
-<img src="IMG_6528.jpeg" alt="Haircut 3">
-<img src="IMG_0964.jpeg" alt="Haircut 4">
+        <div class="rating-badge">
+            <span class="star">★</span> 5.0 (120)
+            <span class="status">• Offen</span>
+        </div>
 
-<section><div class="wrap"><h2 class="title">Unsere Arbeiten</h2><p class="sub">Einige unserer aktuellen Styles.</p><div class="gallery"><img src="images/work-1.jpeg" alt="Haarschnitt bei 1A Haircut München"><img src="images/work-2.jpeg" alt="Haarschnitt bei 1A Haircut München"><img src="images/work-3.jpeg" alt="Haarschnitt bei 1A Haircut München"><img src="images/work-4.jpeg" alt="Haarschnitt bei 1A Haircut München"><img src="images/work-5.jpeg" alt="Haarschnitt bei 1A Haircut München"><img src="images/work-6.jpeg" alt="Haarschnitt bei 1A Haircut München"><img src="images/work-7.jpeg" alt="Haarschnitt bei 1A Haircut München"><img src="images/work-8.jpeg" alt="Haarschnitt bei 1A Haircut München"></div></div></section>
-<section id="about"><div class="wrap about">
-<div><h2 class="title">1A Haircut</h2>
-<p class="sub">Dein Friseur in München-Maxvorstadt.</p>
-<p>Wir verbinden klassische Friseurarbeit mit modernen Styles. Komm vorbei, zeig uns deinen Wunsch-Look und wir kümmern uns um den Rest.</p>
-<p class="muted">📍 Augustenstraße 64, 80333 München</p></div>
-<img src="IMG_0186.jpeg" class="photo" alt="1A Haircut Salon">
+        <div class="location-info">
+            📍 Augustenstraße 64, 80333 München-Maxvorstadt
+        </div>
 
-</div></section>
+        <div class="section-title">Über uns</div>
+        <p class="about-text">
+            Willkommen bei 1A Haircut in München. Wir bieten erstklassige Herrenhaarschnitte, präzise Fades und professionelle Bartpflege in moderner Atmosphäre.
+        </p>
 
-<section><div class="wrap">
-<h2 class="title">Öffnungszeiten</h2>
-<div class="hours">
-<div>Montag <b>09:00–19:00</b></div><div>Dienstag <b>09:00–19:00</b></div>
-<div>Mittwoch <b>09:00–19:00</b></div><div>Donnerstag <b>09:00–19:00</b></div>
-<div>Freitag <b>09:00–19:00</b></div><div>Samstag <b>09:00–18:00</b></div>
-<div>Sonntag <b>Geschlossen</b></div>
-</div></div></section>
+        <div class="section-title">Leistungen</div>
+        <div class="services-list">
+            <div class="service-item">
+                <div>
+                    <div class="service-name">Herren Haarschnitt</div>
+                    <div class="service-desc">Waschen, Schneiden & Styling</div>
+                </div>
+            </div>
+            <div class="service-item">
+                <div>
+                    <div class="service-name">Fade / Seiten auf Null</div>
+                    <div class="service-desc">Präziser Übergang & Konturen</div>
+                </div>
+            </div>
+            <div class="service-item">
+                <div>
+                    <div class="service-name">Haarschnitt + Bart</div>
+                    <div class="service-desc">Komplettes Styling Paket</div>
+                </div>
+            </div>
+        </div>
 
-<section id="contact"><div class="wrap"><div class="contact">
-<h2 class="title">Termin & Kontakt</h2>
-<p class="sub">Augustenstraße 64 · 80333 München</p>
-<a class="btn" href="tel:+498926025349">📞 Jetzt anrufen</a>
-<a class="btn dark" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Augustenstraße+64,+80333+München">📍 Route öffnen</a>
-<p class="muted" style="margin-top:25px">Online-Terminbuchung kann hier später direkt eingebaut werden.</p>
-</div></div></section>
-</main>
+        <div class="section-title">Galerie</div>
+        <div class="gallery-grid">
+            <img src="IMG_6526.png" alt="Haircut 1">
+            <img src="IMG_6527.png" alt="Haircut 2">
+            <img src="IMG_6528.jpeg" alt="Haircut 3">
+            <img src="IMG_0964.jpeg" alt="Haircut 4">
+        </div>
+    </div>
 
-<footer><div class="wrap footer">© 1A Haircut München · Augustenstraße 64</div></footer>
+    <div class="sticky-bottom">
+        <a href="tel:+498926025349" class="btn-book">Anrufen & Buchen</a>
+    </div>
+
 </body>
 </html>
