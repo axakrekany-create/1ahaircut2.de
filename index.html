@@ -72,7 +72,7 @@
         }
 
         .rating-badge span.status {
-            color: #d9534f;
+            color: #27ae60;
             font-weight: 500;
             margin-left: 8px;
         }
@@ -93,27 +93,26 @@
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 12px;
+            margin-top: 24px;
         }
 
         .about-text {
             font-size: 14px;
             line-height: 1.5;
             color: #48484a;
-            margin-bottom: 28px;
         }
 
         .services-list {
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            margin-bottom: 28px;
+            gap: 10px;
         }
 
         .service-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 16px;
+            padding: 14px 16px;
             background: #f9f9fa;
             border-radius: 12px;
             border: 1px solid #eef0f2;
@@ -124,17 +123,28 @@
             font-size: 15px;
         }
 
-        .service-desc {
-            font-size: 13px;
-            color: #6e6e73;
-            margin-top: 4px;
+        .service-price {
+            font-weight: 700;
+            font-size: 15px;
+            color: #121212;
+            white-space: nowrap;
+            margin-left: 12px;
+        }
+
+        .opening-hours {
+            background: #f9f9fa;
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid #eef0f2;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #3a3a3c;
         }
 
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
-            margin-top: 12px;
         }
 
         .gallery-grid img {
@@ -184,7 +194,7 @@
 
         <div class="rating-badge">
             <span class="star">★</span> 5.0 (120)
-            <span class="status">• Offen</span>
+            <span class="status">• Geöffnet</span>
         </div>
 
         <div class="location-info">
@@ -196,26 +206,50 @@
             Willkommen bei 1A Haircut in München. Wir bieten erstklassige Herrenhaarschnitte, präzise Fades und professionelle Bartpflege in moderner Atmosphäre.
         </p>
 
-        <div class="section-title">Leistungen</div>
+        <div class="section-title">Preise & Leistungen</div>
         <div class="services-list">
             <div class="service-item">
-                <div>
-                    <div class="service-name">Herren Haarschnitt</div>
-                    <div class="service-desc">Waschen, Schneiden & Styling</div>
-                </div>
+                <span class="service-name">Schneiden</span>
+                <span class="service-price">18,00 €</span>
             </div>
             <div class="service-item">
-                <div>
-                    <div class="service-name">Fade / Seiten auf Null</div>
-                    <div class="service-desc">Präziser Übergang & Konturen</div>
-                </div>
+                <span class="service-name">Schneiden mit Messer / Trimmer</span>
+                <span class="service-price">21,00 €</span>
             </div>
             <div class="service-item">
-                <div>
-                    <div class="service-name">Haarschnitt + Bart</div>
-                    <div class="service-desc">Komplettes Styling Paket</div>
-                </div>
+                <span class="service-name">Waschen</span>
+                <span class="service-price">4,00 €</span>
             </div>
+            <div class="service-item">
+                <span class="service-name">Haare Färben</span>
+                <span class="service-price">20,00 €</span>
+            </div>
+            <div class="service-item">
+                <span class="service-name">Bart</span>
+                <span class="service-price">14,00 €</span>
+            </div>
+            <div class="service-item">
+                <span class="service-name">Bart Färben</span>
+                <span class="service-price">15,00 €</span>
+            </div>
+            <div class="service-item">
+                <span class="service-name">Augenbrauen Zupfen</span>
+                <span class="service-price">7,00 €</span>
+            </div>
+            <div class="service-item">
+                <span class="service-name">Komplett Gesicht Zupfen</span>
+                <span class="service-price">14,00 €</span>
+            </div>
+            <div class="service-item">
+                <span class="service-name">Warmwachs</span>
+                <span class="service-price">ab 5,00 €</span>
+            </div>
+        </div>
+
+        <div class="section-title">Öffnungszeiten</div>
+        <div class="opening-hours">
+            <strong>Mo – Fr:</strong> 09:00 – 19:00 Uhr<br>
+            <strong>Samstag:</strong> 09:00 – 18:00 Uhr
         </div>
 
         <div class="section-title">Galerie</div>
@@ -233,3 +267,4 @@
 
 </body>
 </html>
+
